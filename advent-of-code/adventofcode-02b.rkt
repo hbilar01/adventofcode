@@ -7,8 +7,7 @@
         (if (= i j) 0
             (if (= (modulo i j) 0)
                 (/ i j)
-                0 
-                )))))
+                0)))))
 
 (define (chksum lst)
   (if (null? lst) 0
