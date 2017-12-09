@@ -527,8 +527,7 @@ xzvfbf fopmfxu mvftgr mfupoxf coyhof talcc vpkslo")
   (if (null? lst)
       count
       (let ([c (count-strings-in-list (car lst) orig-lst)]) 
-          (count-all-strings-in-list (cdr lst) orig-lst (+ count c))
-      )))
+          (count-all-strings-in-list (cdr lst) orig-lst (+ count c)))))
 
 ; check if a string is a valid pass phrase (if each word only occurs once)
 (define (valid-phrase? lst)
@@ -540,9 +539,6 @@ xzvfbf fopmfxu mvftgr mfupoxf coyhof talcc vpkslo")
       0
       (if (valid-phrase? (string-split (car lst) " "))
           (add1 (count-valid-phrases (cdr lst)))
-          (count-valid-phrases (cdr lst))
-      )
-  )
-)
+          (count-valid-phrases (cdr lst)))))
 
 (count-valid-phrases (string-split input "\n"))
